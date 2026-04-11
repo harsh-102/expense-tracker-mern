@@ -1,0 +1,16 @@
+node_modules
+.env
+dist
+build
+npm-debug.log
+yarn-error.log
+.DS_Store
+.idea/
+.vscode/
+
+# Backend specific ignored folders
+backend/uploads
+
+# Coverage directories
+coverage/
+.nyc_output/
