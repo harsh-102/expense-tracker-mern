@@ -17,6 +17,9 @@ pipeline {
         stage('Backend: Install & Test') {
             steps {
                 dir('backend') {
+                    // Inject local .env file securely into the jenkins workspace 
+                    sh 'cp /Users/harshita/MERN_PROJECT/backend/.env ./ || true'
+                    
                     sh 'npm install'
                     sh 'npm run test'
                 }
