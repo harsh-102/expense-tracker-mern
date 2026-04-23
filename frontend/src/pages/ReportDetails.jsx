@@ -167,7 +167,7 @@ const ReportDetails = () => {
 
                  {exp.bill_image_url && (
                     <div style={{ marginTop: '10px' }}>
-                       <a href={`http://localhost:5001${exp.bill_image_url}`} target="_blank" rel="noreferrer" style={{ fontSize: '0.85rem', textDecoration: 'underline' }}>View Receipt</a>
+                       <a href={`${import.meta.env.VITE_API_BASE_URL?.replace('/api', '') || 'http://localhost:5001'}${exp.bill_image_url}`} target="_blank" rel="noreferrer" style={{ fontSize: '0.85rem', textDecoration: 'underline' }}>View Receipt</a>
                     </div>
                  )}
                  {canEdit && (
